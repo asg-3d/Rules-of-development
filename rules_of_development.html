@@ -1114,6 +1114,7 @@ body .markdown-body
 </li>
 <li><a href="#тестирование-javascript-кода">Тестирование JavaScript кода</a></li>
 <li><a href="#файловая-структура-проектов">Файловая структура проектов</a></li>
+<li><a href="#использование-бэм">Использование БЭМ</a></li>
 <li><a href="#полезное">Полезное</a><ul>
 <li><a href="#вычисление-переменных-ssi">Вычисление переменных SSI</a></li>
 </ul>
@@ -1171,7 +1172,7 @@ body .markdown-body
 <li>Согласовать с дизайнером Style Guide для контента на сайте (шрифты, размеры, отступы): все основные заголовки (<code>&lt;h1&gt;...&lt;h6&gt;</code>), нумерованные и не нумерованные списки, абзацы, таблицы (заголовок, ячейка-заголовок, ячейка-подвал и тело).</li>
 <li>Для проекта в репозитории создается ветка с соответствующим названием (или checkout для поддержки).</li>
 <li>Дизайн мобильной версии, если предполагается (см. с <a href="#bookmark1">пункта 1</a>).</li>
-<li>Комментарии SEO-специалиста о положении тегов, влияющих на <a href="#bookmark2">SEO-оптимизацию</a>.</li>
+<li>Комментарии SEO-специалиста о положении тегов, влияющих на <a href="#требования-seo">SEO-оптимизацию</a>.</li>
 </ol>
 <p><a name="общие-требования"></a></p>
 <h2 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Общие требования</h2>
@@ -1500,7 +1501,7 @@ body .markdown-body
 <p><a name="css-фрэймворк"></a></p>
 <h2 id="css-"><a name="user-content-css-" href="#css-" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CSS-фрэймворк</h2>
 <p><a name="использование-lesscss-в-проектах"></a></p>
-<h3 id="lesscss"><a name="user-content-lesscss" href="#lesscss" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование<a href="http://lesscss.org/"> lessCSS</a> в проектах</h3>
+<h3 id="lesscss"><a name="user-content-lesscss" href="#lesscss" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование <a href="http://lesscss.org/">lessCSS</a> в проектах</h3>
 <p>В проектах, имеющих (или могущих иметь) более одной страницы обязательно использовать lessCSS. </p>
 <p>Желательно использовать функционал <strong>переменных</strong> (например, для цвета сылок), <strong>микшинов</strong> (например, для кроссбраузерных transition или linear-gradient) и вложенности.</p>
 <h4 id="less"><a name="user-content-less" href="#less" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование вложенности в less.</h4>
@@ -1597,7 +1598,7 @@ body .markdown-body
 <p><a name="bookmark3"></a></p>
 <p><a name="требования-к-оформлению-javascript"></a></p>
 <h2 id="javascript"><a name="user-content-javascript" href="#javascript" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Требования к оформлению JavaScript</h2>
-<p>Все JavaScript-файлы должны быть в несжатом виде (в т.ч. jQuery) — при публикации проекта файлы объединяются и сжимаются при помощи сценария сборки <a href="http://gruntjs.com">Grunt</a>.</p>
+<p>Все JavaScript-файлы должны быть в несжатом виде (в т.ч. jQuery и прочие библиотеки) — при публикации проекта, происходит сборка и сжатие при помощи сценария сборки <a href="http://gulpjs.com">Gulp</a> или <a href="http://gruntjs.com">Grunt</a>.</p>
 <p><a name="оформление-кода-1"></a></p>
 <h3 id="_11"><a name="user-content-_11" href="#_11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Оформление кода</h3>
 <ol>
@@ -1671,6 +1672,7 @@ body .markdown-body
 <p>К элементам следует обращаться по <code>id</code>, по <code>id</code> родительского элемента или по объекту родительского элемента:<br />
     <div class="codehilite"><pre><span class="kd">var</span> <span class="nx">$foo</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#foo&quot;</span><span class="p">);</span> <span class="c1">// id элемента</span>
 <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#foo input.bar&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(...);</span>  <span class="c1">// родительский id</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#foo&quot;</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;input.bar&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(...);</span>  <span class="c1">// родительский id</span>
 <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;input.bar&quot;</span><span class="p">,</span> <span class="nx">$foo</span><span class="p">).</span><span class="nx">click</span><span class="p">(...);</span> <span class="c1">// объект $foo</span>
 </pre></div>
 </p>
@@ -1679,23 +1681,24 @@ body .markdown-body
 <p>Рекомендуется объединять события и правила для элементов одного типа (или селектора) в функцию <code>.each()</code>.</p>
 </li>
 <li>
-<p>Рекомендуется оформлять логически завершенный функционал как <strong><a href="http://docs.jquery.com/Plugins/Authoring#The_Basics">плагины</a></strong>, используя <a href="#bookmark=id.ojnbsol7fjin">фабрику</a>.</p>
+<p>Рекомендуется оформлять логически завершенный функционал, используя <a href="#фабрика-плагинов-jquery">фабрику плагинов</a>.</p>
 </li>
 <li>
 <p>При написании плагина или добавлении элементов на страницу, следует помещать оформление в отдельный CSS/LESS-файл.</p>
 </li>
 <li>
-<p>Следует использовать замыкание, если jQuery находится в режиме совместимости и/или <code>$</code> занят другой библиотекой; использовать <code>$</code>, как обычно, но внутри замыкания:<br />
+<p>Следует использовать замыкание для избежания конфликтов, когда jQuery находится в режиме совместимости и/или <code>$</code> занят другой библиотекой; использовать <code>$</code>, как обычно внутри замыкания:<br />
     <div class="codehilite"><pre><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">){</span>
     <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;selector&quot;</span><span class="p">).</span><span class="nx">code</span><span class="p">...</span>
     <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;other selector&quot;</span><span class="p">).</span><span class="nx">otherCode</span><span class="p">...</span>
 <span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span>
 </pre></div>
-</p>
+<br />
+<a name="фабрика-плагинов-jquery"></a></p>
 </li>
 </ol>
 <h4 id="jquery_1"><a name="user-content-jquery_1" href="#jquery_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Фабрика плагинов jQuery</h4>
-<p>Для создания плагинов, следует исрользовать <a href="https://gist.github.com/peremenov/8e27ec14c87da7112a88">фабрику плагинов</a>. Она позволяет избежать дублирования кода и стандартизирует стиль.</p>
+<p>Для создания плагинов, следует исрользовать <a href="https://github.com/peremenov/jquery-factory">фабрику плагинов</a>. Она позволяет избежать дублирования кода и стандартизирует стиль.</p>
 <h4 id="javascript-jquery"><a name="user-content-javascript-jquery" href="#javascript-jquery" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Список рекомендуемых JavaScript библиотек, плагинов jQuery</h4>
 <p>Рекомендуемые JavaScript библиотеки:</p>
 <ul>
@@ -1781,8 +1784,10 @@ body .markdown-body
 </pre></div>
 </p>
 <p>Директория <code>static/</code> каждого из проектов используется при размешении сайта на &ldquo;боевой&rdquo; сервер.</p>
+<p><a name="использование-бэм"></a></p>
+<h2 id="_13"><a name="user-content-_13" href="#_13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование БЭМ</h2>
 <p><a name="полезное"></a></p>
-<h2 id="_13"><a name="user-content-_13" href="#_13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Полезное</h2>
+<h2 id="_14"><a name="user-content-_14" href="#_14" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Полезное</h2>
 <ul>
 <li><a href="http://lesscss.org/">lessCSS</a> — улучшенный CSS с переменными, &ldquo;функциями&rdquo;, наследованием и вложенностью</li>
 <li><a href="http://emmet.io">emmet</a> — быстрое написание структуры HTML/CSS в редакторе</li>
@@ -1793,7 +1798,6 @@ body .markdown-body
 <li><a href="http://tinypng.org">TinyPNG</a> — сжималка PNG изображений без потерь</li>
 <li><a href="http://cufon.shoqolate.com/generate/">Cufon</a> — генерация кастомных шрифтов для веб</li>
 </ul>
-<p><a name="bookmark6"></a></p>
 <p><a name="вычисление-переменных-ssi"></a></p>
 <h3 id="ssi_1"><a name="user-content-ssi_1" href="#ssi_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Вычисление переменных SSI</h3>
 <p>См. <a href="http://pastebin.com/t0rVcbVT">http://pastebin.com/t0rVcbVT</a></p>
