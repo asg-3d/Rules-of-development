@@ -253,15 +253,15 @@
 		width:980px;
 		margin:0 auto;
 	}
-		.footer-l {		/&-l {  *//Если в формате less */
+		.footer-l {		/* &-l {  *//* Если в формате less */
 			float:left;
 			display:inline;
 		}
-			.footer-l li {		/li { */
+			.footer-l li {		/* li { */
 				float:left;
 				display:block;
 			}
-		.footer-r {		/&-r { */
+		.footer-r {		/* &-r { */
 			float:right;
 		}
 	```
@@ -295,17 +295,17 @@
 
 **ie.css:**
 ```css
-/IE8 */
+/* IE8 */
 tag {
 	attribute: value;
 }
 
-/IE6,7 */
+/* IE6,7 */
 tag {
 	*attribute:value;
 }
 
-/IE6 */
+/* IE6 */
 html tag {
 	attribute: value;
 } 
@@ -368,7 +368,6 @@ tag {
 		&-img {
 		}
 	}
-
 }
 ```
 
@@ -476,7 +475,7 @@ tag {
 
 	```javascript
 	var alpha = {
-		‘foo’ : 0
+		"foo" : 0
 	};
 	alpha.bar = function(bee) {
 		return alpha.foo+bee;
@@ -513,9 +512,9 @@ tag {
 
 3. К элементам следует обращаться по `id`, по `id` родительского элемента или по объекту родительского элемента:
 	```javascript
-	var $foo = $(‘#foo’); // id элемента
-	$(‘#foo input.bar’).click(...);  // родительский id
-	$(‘input.bar’, $foo).click(...); // объект $foo
+	var $foo = $("#foo"); // id элемента
+	$("#foo input.bar").click(...);  // родительский id
+	$("input.bar", $foo).click(...); // объект $foo
 	```
 
 4. Рекомендуется объединять события и правила для элементов одного типа (или селектора) в функцию `.each()`.
@@ -527,8 +526,8 @@ tag {
 7. Следует использовать замыкание, если jQuery находится в режиме совместимости и/или `$` занят другой библиотекой; использовать `$`, как обычно, но внутри замыкания:
 	```javascript
 	(function($){
-		$(‘selector’).code...
-		$(‘other selector’).otherCode...
+		$("selector").code...
+		$("other selector").otherCode...
 	})(jQuery);
 	```
 

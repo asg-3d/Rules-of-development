@@ -1,0 +1,1815 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><style>.codehilite pre .hll { background-color: #f8eec7 }
+.codehilite pre  { background: #ffffff; color: #333333 }
+.codehilite pre .c { color: #999988; font-style: italic } /* Comment */
+.codehilite pre .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.codehilite pre .k { font-weight: bold } /* Keyword */
+.codehilite pre .n { color: #333333 } /* Name */
+.codehilite pre .o { font-weight: bold } /* Operator */
+.codehilite pre .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.codehilite pre .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.codehilite pre .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.codehilite pre .cs { color: #999988; font-style: italic } /* Comment.Special */
+.codehilite pre .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.codehilite pre .ge { font-style: italic } /* Generic.Emph */
+.codehilite pre .gr { color: #aa0000 } /* Generic.Error */
+.codehilite pre .gh { color: #999999 } /* Generic.Heading */
+.codehilite pre .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.codehilite pre .go { color: #888888 } /* Generic.Output */
+.codehilite pre .gp { color: #555555 } /* Generic.Prompt */
+.codehilite pre .gs { font-weight: bold } /* Generic.Strong */
+.codehilite pre .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.codehilite pre .gt { color: #aa0000 } /* Generic.Traceback */
+.codehilite pre .kc { font-weight: bold } /* Keyword.Constant */
+.codehilite pre .kd { font-weight: bold } /* Keyword.Declaration */
+.codehilite pre .kn { font-weight: bold } /* Keyword.Namespace */
+.codehilite pre .kp { font-weight: bold } /* Keyword.Pseudo */
+.codehilite pre .kr { font-weight: bold } /* Keyword.Reserved */
+.codehilite pre .kt { font-weight: bold } /* Keyword.Type */
+.codehilite pre .m { color: #945277 } /* Literal.Number */
+.codehilite pre .s { color: #df5000 } /* Literal.String */
+.codehilite pre .na { color: #008080 } /* Name.Attribute */
+.codehilite pre .nb { color: #0086b3 } /* Name.Builtin */
+.codehilite pre .nc { color: #445588; font-weight: bold } /* Name.Class */
+.codehilite pre .no { color: #094e99 } /* Name.Constant */
+.codehilite pre .nd { color: #333333 } /* Name.Decorator */
+.codehilite pre .ni { color: #800080 } /* Name.Entity */
+.codehilite pre .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.codehilite pre .nf { color: #945277; font-weight: bold } /* Name.Function */
+.codehilite pre .nl { color: #333333 } /* Name.Label */
+.codehilite pre .nn { color: #555555 } /* Name.Namespace */
+.codehilite pre .nx { color: #333333 } /* Name.Other */
+.codehilite pre .py { color: #333333 } /* Name.Property */
+.codehilite pre .nt { color: #000080 } /* Name.Tag */
+.codehilite pre .nv { color: #008080 } /* Name.Variable */
+.codehilite pre .ow { font-weight: bold } /* Operator.Word */
+.codehilite pre .w { color: #bbbbbb } /* Text.Whitespace */
+.codehilite pre .mb { color: #945277 } /* Literal.Number.Bin */
+.codehilite pre .mf { color: #945277 } /* Literal.Number.Float */
+.codehilite pre .mh { color: #945277 } /* Literal.Number.Hex */
+.codehilite pre .mi { color: #945277 } /* Literal.Number.Integer */
+.codehilite pre .mo { color: #945277 } /* Literal.Number.Oct */
+.codehilite pre .sb { color: #df5000 } /* Literal.String.Backtick */
+.codehilite pre .sc { color: #df5000 } /* Literal.String.Char */
+.codehilite pre .sd { color: #df5000 } /* Literal.String.Doc */
+.codehilite pre .s2 { color: #df5000 } /* Literal.String.Double */
+.codehilite pre .se { color: #df5000 } /* Literal.String.Escape */
+.codehilite pre .sh { color: #df5000 } /* Literal.String.Heredoc */
+.codehilite pre .si { color: #df5000 } /* Literal.String.Interpol */
+.codehilite pre .sx { color: #df5000 } /* Literal.String.Other */
+.codehilite pre .sr { color: #017936 } /* Literal.String.Regex */
+.codehilite pre .s1 { color: #df5000 } /* Literal.String.Single */
+.codehilite pre .ss { color: #8b467f } /* Literal.String.Symbol */
+.codehilite pre .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.codehilite pre .vc { color: #008080 } /* Name.Variable.Class */
+.codehilite pre .vg { color: #008080 } /* Name.Variable.Global */
+.codehilite pre .vi { color: #008080 } /* Name.Variable.Instance */
+.codehilite pre .il { color: #945277 } /* Literal.Number.Integer.Long */</style><title>rules_of_development</title></head><body><article class="markdown-body"><h1 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Регламент разработки пользовательского интерфейса</h1>
+<h2 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Оглавление</h2>
+<!-- MarkdownTOC depth=3 -->
+
+<ul>
+<li><a href="#информация-необходимая-для-начала-работы">Информация, необходимая для начала работы</a></li>
+<li><a href="#общие-требования">Общие требования</a></li>
+<li><a href="#браузеры">Браузеры</a></li>
+<li><a href="#требования-к-оформлению-html">Требования к оформлению HTML</a><ul>
+<li><a href="#юзабилити">Юзабилити</a></li>
+<li><a href="#стандарты-w3c">Стандарты W3C</a></li>
+<li><a href="#требования-seo">Требования SEO</a></li>
+<li><a href="#использование-ssi">Использование SSI)</a></li>
+</ul>
+</li>
+<li><a href="#требования-к-оформлению-css">Требования к оформлению CSS</a><ul>
+<li><a href="#оформление-кода">Оформление кода</a></li>
+<li><a href="#поддержка-старых-версий-internet-explorer">Поддержка старых версий Internet Explorer</a></li>
+<li><a href="#использование-z-index">Использование z-index</a></li>
+<li><a href="#использование-css3">Использование CSS3</a></li>
+</ul>
+</li>
+<li><a href="#css-фрэймворк">CSS-фрэймворк</a><ul>
+<li><a href="#использование-lesscss-в-проектах">Использование lessCSS в проектах</a></li>
+<li><a href="#структура-файлов">Структура файлов</a></li>
+<li><a href="#названия-классов-для-структурных-блоков-верстки">Названия классов для структурных блоков верстки</a></li>
+</ul>
+</li>
+<li><a href="#требования-к-оформлению-javascript">Требования к оформлению JavaScript</a><ul>
+<li><a href="#оформление-кода-1">Оформление кода</a></li>
+<li><a href="#использование-jquery">Использование jQuery</a></li>
+</ul>
+</li>
+<li><a href="#тестирование-javascript-кода">Тестирование JavaScript кода</a></li>
+<li><a href="#файловая-структура-проектов">Файловая структура проектов</a></li>
+<li><a href="#полезное">Полезное</a><ul>
+<li><a href="#вычисление-переменных-ssi">Вычисление переменных SSI</a></li>
+</ul>
+</li>
+</ul>
+<!-- /MarkdownTOC -->
+
+<p><a name="информация-необходимая-для-начала-работы"></a></p>
+<h2 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Информация, необходимая для начала работы</h2>
+<p><a name="bookmark1"></a></p>
+<ol>
+<li>
+<p>Дизайн-макеты уникальных страниц и диалоговых окон (слои необходимо объединять в группу «Dialogs» поверх остальных слоев). Favicon, иконки закладок для мобильных устройств и пр. (в пикселях):  </p>
+<ul>
+<li>iPhone, iPad, iPad 3, iPhone 4, Android:<ul>
+<li>48×48</li>
+<li>57×57</li>
+<li>72×72</li>
+<li>114×114</li>
+<li>120×120</li>
+<li>144×144</li>
+<li>152×152</li>
+</ul>
+</li>
+<li>Favicon:<ul>
+<li>16×16</li>
+<li>32×32</li>
+<li>64×64</li>
+</ul>
+</li>
+<li>Тайлы для IE11:<ul>
+<li>70×70</li>
+<li>150×150</li>
+<li>310×310</li>
+</ul>
+</li>
+<li>Opera Speed Dial, Yandex Browser:<ul>
+<li>195×195</li>
+</ul>
+</li>
+</ul>
+<p><em>Для генерации можно воспользоваться утилитой <a href="https://github.com/goooseman/webicon">webicon</a>.</em></p>
+</li>
+<li>
+<p>Схема навигации страниц.</p>
+</li>
+<li>Описание сценариев взаимодействий.</li>
+<li>Техническое задание — описание поведения основных и второстепенных блоков:<ul>
+<li>изменяемая/фиксированная ширина;</li>
+<li>как тянутся колонки, поведение элементов при изменении ширины окна браузера;</li>
+<li>поведение элементов при действиях пользователя например: наведение курсора мыши, активные/неактивные кнопки и пр.</li>
+<li>разные состояния блоков — для зарегистрированных/незарегистрированных пользователей и т.п.</li>
+</ul>
+</li>
+<li>Согласовать с дизайнером Style Guide для контента на сайте (шрифты, размеры, отступы): все основные заголовки (<code>&lt;h1&gt;...&lt;h6&gt;</code>), нумерованные и не нумерованные списки, абзацы, таблицы (заголовок, ячейка-заголовок, ячейка-подвал и тело).</li>
+<li>Для проекта в репозитории создается ветка с соответствующим названием (или checkout для поддержки).</li>
+<li>Дизайн мобильной версии, если предполагается (см. с <a href="#bookmark1">пункта 1</a>).</li>
+<li>Комментарии SEO-специалиста о положении тегов, влияющих на <a href="#bookmark2">SEO-оптимизацию</a>.</li>
+</ol>
+<p><a name="общие-требования"></a></p>
+<h2 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Общие требования</h2>
+<ol>
+<li>
+<p>Конечный результат верстки должен соответствовать макету (модульная сетка, размеры, цвета шрифтов, межстрочные интервалы, отступы) в разных браузерах и операционных системах. Изменения могут вноситься при согласовании с дизайнером, юзабилистом и менеджером проекта.</p>
+</li>
+<li>
+<p>Конечный результат верстки должен сохранять пропорции, функционал и информацию при масштабе –1..+2 для Firefox, Opera, Safari, Chrome, Opera (в т.ч. в режиме масштабирования &ldquo;Только текст&rdquo;); 80..120% для Internet Explorer 8-10.</p>
+</li>
+<li>
+<p>При отключении JavaScript сетка макета и основной функционал страницы должны сохраняться (переход по ссылкам, отправка форм).</p>
+</li>
+<li>
+<p>Должны использоваться изображения следующих форматов png, gif, jpg и использоваться в соответствии с назначением:</p>
+<ul>
+<li>JPG — сохранение больших изображений с большим количеством цветов и оттенков;</li>
+<li>GIF — сохранение небольших изображениий типа значков и стрелок, а также повторяющихся фоновых изображений;</li>
+<li>PNG — сохранение любых изображений с большими монотонными областями или небольших изображений, фоновых неповторяющихся изображениий, а также изображений с альфа-каналом.</li>
+</ul>
+</li>
+<li>
+<p>Минимальное разрешение экрана для «резиновой» верстки 1024×768, максимальное — 1280×1024, если не описано явно.</p>
+</li>
+<li>
+<p>Названия <code>class</code>, <code>id</code>, <code>name</code>, методов и функций JavaScript, и пр. должны быть на английском языке и понятно описывать <strong>контекст(ы)</strong>, которые в них заложены.</p>
+</li>
+</ol>
+<p><a name="браузеры"></a></p>
+<h2 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Браузеры</h2>
+<ol>
+<li>
+<p>Internet Explorer 8, 9, 10 (Internet Explorer 8 в режиме деградации дизайна).</p>
+</li>
+<li>
+<p>Firefox — последняя версия.</p>
+</li>
+<li>
+<p>Opera (Presto, Webkit) — последняя версия (12, 20).</p>
+</li>
+<li>
+<p>Google Chrome — последняя версия.</p>
+</li>
+<li>
+<p>Safari — последняя версия.</p>
+</li>
+<li>
+<p>Мобильные браузеры (предполагается отдельная версия дизайна для мобильных устройств):</p>
+<ul>
+<li>Opera Mobile, Opera Mini</li>
+<li>Safari</li>
+<li>Android</li>
+<li>Symbian</li>
+<li>Windows Phone</li>
+</ul>
+</li>
+</ol>
+<!-- -->
+
+<ol>
+<li>
+<p>Весь функционал и внешний вид сайта должен сохраняться для любого браузера из списка.<br />
+Старые браузеры:</p>
+<ol>
+<li>
+<p>Использовать принцип деградации дизайна (тени, градиенты, закругленные углы).</p>
+</li>
+<li>
+<p>Если необходима поддержка эффектов, то использовать специальные классы и добавлять необходимые элементы, если это необходимо с помощью JavaScript (Modernizr).</p>
+</li>
+</ol>
+</li>
+<li>
+<p>При отказе (добавлении) от поддержки браузера, версии браузера или ОС, сообщается дополнительно и фиксируется в данном регламенте.</p>
+</li>
+<li>
+<p>Гарантируется работа основного функционала в старых браузерах (отправка форм, сохранение позиционирования сетки, представление информации).</p>
+</li>
+<li>
+<p>Гарантируется работа основного функционала при отключенном JavaScript (отправка форм, сохранение позиционирования сетки, представление информации).</p>
+</li>
+</ol>
+<p><a name="требования-к-оформлению-html"></a></p>
+<h2 id="html"><a name="user-content-html" href="#html" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Требования к оформлению HTML</h2>
+<ol>
+<li>
+<p>Следует использовать отступы с помощью знака табуляции и комментарии при оформлении кода, переносы строк Unix-like (<code>\n</code>).</p>
+</li>
+<li>
+<p>Минимализм и чистота кода — каждый элемент должен быть оформлен минимально достаточным набором тэгов и стилей.</p>
+</li>
+<li>
+<p>JavaScript и CSS всегда должны находиться в отдельных файлах (см. «<a href="#bookmark3">Требования к оформлению JavaScript</a>», «<a href="#bookmark4">Требования к оформлению CSS</a>», «<a href="#bookmark5">CSS-фрэймворк</a>»).</p>
+</li>
+<li>
+<p>Все шаблоны должны верстаться в кодировке UTF-8.</p>
+</li>
+<li>
+<p>Документ должен проходить тест W3C на валидность.</p>
+</li>
+<li>
+<p>Следует придерживаться семантического и логического назначения элемента (<code>dl</code>, <code>ul</code>, <code>ol</code> и пр.).</p>
+</li>
+<li>
+<p>Следует использовать в качестве якоря <code>id</code>.</p>
+</li>
+<li>
+<p>Следует показывать конец длинного блока, отображая в комментарии его <code>class</code>, <code>id</code>, <code>name</code> и пр. css-селектором, чтобы можно было легко найти конец или начало блока.</p>
+<ul>
+<li>
+<p>Пример:<br />
+    <div class="codehilite"><pre><span class="c">&lt;!-- .box --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="c">&lt;!-- /.box --&gt;</span>
+</pre></div>
+</p>
+</li>
+<li>
+<p>Пример:<br />
+    <div class="codehilite"><pre><span class="c">&lt;!-- #content --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;content&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="c">&lt;!-- /#content --&gt;</span>
+</pre></div>
+</p>
+</li>
+<li>
+<p>Пример:<br />
+    <div class="codehilite"><pre><span class="c">&lt;!-- [name=&quot;calculate-form&quot;] --&gt;</span>
+<span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">&quot;get&quot;</span> <span class="na">name=</span><span class="s">&quot;calculate-form&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/form&gt;</span>
+<span class="c">&lt;!-- /[name=&quot;calculate-form&quot;] --&gt;</span>
+</pre></div>
+</p>
+</li>
+<li>
+<p>Пример:<br />
+    <div class="codehilite"><pre><span class="c">&lt;!-- [rel=&quot;some-link&quot;] --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;...&quot;</span> <span class="na">rel=</span><span class="s">&quot;some-link&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
+<span class="c">&lt;!-- /[rel=&quot;some-link&quot;] --&gt;</span>
+</pre></div>
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>При использовании <strong>zenCoding</strong> использовать модификатор <code>|c</code>.<br />
+Например: <code>tag.class|c</code>.</p>
+</li>
+</ol>
+<p><a name="юзабилити"></a></p>
+<h3 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Юзабилити</h3>
+<ol>
+<li>
+<p>Следует оформлять название полей форм <code>&lt;label&gt;</code> <strong>с использованием</strong> <code>id</code>:<br />
+<div class="codehilite"><pre><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text”</span> <span class="na">id=</span><span class="s">”this-text”</span> <span class="na">name=</span><span class="s">”some-name”</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">”this-text”</span><span class="nt">&gt;</span>Этот текст<span class="nt">&lt;/label&gt;</span>
+</pre></div>
+</p>
+</li>
+<li>
+<p>Следует использовать <code>tabindex</code> в формах для корректного перехода между полями формы при помощи клавиши tab.</p>
+</li>
+<li>
+<p>Следует добавлять <code>alt</code> к изображениям и <code>title</code> к значимым элементам для расшифровки ключевых функций (кнопки, меню, etc.).</p>
+</li>
+<li>
+<p>Следует использовать ссылки со <strong>сплошным</strong> подчеркиванием для перехода на внешние (или внутренние) страницы и ссылки с <strong>пунктирным</strong> подчеркиванием для активации элементов на текущей странице.</p>
+</li>
+</ol>
+<p><a name="стандарты-w3c"></a></p>
+<h3 id="w3c"><a name="user-content-w3c" href="#w3c" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Стандарты W3C</h3>
+<ol>
+<li>
+<p>При верстке для документов следует использовать страндарт HTML5 <code>&lt;!DOCTYPE HTML&gt;</code>.</p>
+</li>
+<li>
+<p><strong>Запрещается</strong> использование не имеющих <strong>смыслового значения элементов</strong> (распорок spacer, разделителей блоков через пустые <code>&lt;div&gt;</code>, картинки и т.д.).</p>
+</li>
+<li>
+<p><strong>Таблицы</strong> следует использовать только для отображения табличных данных (исключениями являются те редкие случаи, когда без таблиц не удаётся добиться совместимости со всеми требуемыми браузерами, согласуется с другими верстальщиками).</p>
+</li>
+<li>
+<p>Следует придерживаться соответствия структурной разметки визуальному представлению данных (<strong>семантика</strong>).</p>
+</li>
+<li>
+<p><strong>Запрещается</strong> использовать <strong>тэг <code>&lt;p&gt;</code> в качестве контейнера</strong>. Использовать только для обозначения обзацев текста внутри других контейнеров.</p>
+</li>
+<li>
+<p>Для совместимости с Internet Explorer 8 запрещается использовать строковые элементы в качестве контейнера блочных.</p>
+</li>
+</ol>
+<p><a name="bookmark2"></a></p>
+<p><a name="требования-seo"></a></p>
+<h3 id="seo"><a name="user-content-seo" href="#seo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Требования SEO</h3>
+<p>Шаблон страницы должен быть сформирован с учетом требований по оптимизации под поисковые системы:</p>
+<ol>
+<li>
+<p>На странице следует использовать не более одного заголовка (<code>&lt;h1&gt; … &lt;h6&gt;</code>) или не более трех, но разного уровня.</p>
+</li>
+<li>
+<p>Заголовком следует помечать именно заголовок (статьи например). Название раздела или блока заголовком не является.</p>
+</li>
+<li>
+<p>Приветствуется использование <a href="http://microformats.org">микроформатов</a> для <a href="http://help.yandex.ru/webmaster/?id=1111573">карточек пользователей и организаций</a>, <a href="http://help.yandex.ru/webmaster/?id=1113264">товаров</a>, <a href="http://help.yandex.ru/webmaster/?id=1111981">кулинарных рецептов</a>, <a href="http://ru.wikipedia.org/wiki/HCalendar">событий</a>, <a href="http://help.yandex.ru/webmaster/?id=1113262">отзывов пользователей</a>, <a href="http://ru.wikipedia.org/wiki/Geo_(микроформат)">географических координат</a>.</p>
+</li>
+<li>
+<p>Приветствуется использование стандартов семантической разметки (<a href="http://schema.org/">schema.org</a>, перевод - <a href="http://ruschema.org/">ruschema.org</a>) для поисковых систем.</p>
+</li>
+</ol>
+<p><a name="использование-ssi"></a></p>
+<h3 id="ssi"><a name="user-content-ssi" href="#ssi" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование <a href="http://ru.wikipedia.org/wiki/SSI_(программирование)">SSI</a></h3>
+<ol>
+<li>
+<p>Для упрощения разработки следует <strong>использовать SSI</strong>. SSI помогает избежать повторения кода и разбить страницу на логические блоки. Также возможно использование переменных для отображения разного содержимого страниц в зависимости от необходимых условий.</p>
+</li>
+<li>
+<p>Файлы следует подключать через <strong>относительные пути</strong>.</p>
+</li>
+<li>
+<p>Название файлов должны <strong>соответствовать названию блоков</strong> внутри них.</p>
+</li>
+<li>
+<p>Для упрощения использования, см. <a href="#bookmark6">Вычисление переменных SSI</a>.</p>
+</li>
+</ol>
+<p><a name="bookmark4"></a></p>
+<p><a name="требования-к-оформлению-css"></a></p>
+<h2 id="css"><a name="user-content-css" href="#css" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Требования к оформлению CSS</h2>
+<p><a name="оформление-кода"></a></p>
+<h3 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Оформление кода</h3>
+<ol>
+<li>
+<p>Следует использовать отступы с помощью знака табуляции и комментарии при оформлении кода, переносы строк Unix-like (<code>\n</code>).</p>
+</li>
+<li>
+<p>Следует отбивать атрибуты переносом строки и отступом.</p>
+</li>
+<li>
+<p>Следует использовать <code>class</code> для оформление стилей. <code>id</code> используется только для  одиночных (уникальных) элементов, с которыми будет взаимодействовать JavaScript или для элементов форм, которым нужен <code>label</code>.</p>
+</li>
+<li>
+<p>Следует соблюдать иерархию селекторов при помощи отступов:</p>
+<div class="codehilite"><pre><span class="nc">.footer</span> <span class="p">{</span>
+    <span class="k">width</span><span class="o">:</span><span class="m">980px</span><span class="p">;</span>
+    <span class="k">margin</span><span class="o">:</span><span class="m">0</span> <span class="k">auto</span><span class="p">;</span>
+<span class="p">}</span>
+    <span class="nc">.footer-l</span> <span class="p">{</span>     <span class="c">/* &amp;-l {  *//* Если в формате less */</span>
+        <span class="k">float</span><span class="o">:</span><span class="k">left</span><span class="p">;</span>
+        <span class="k">display</span><span class="o">:</span><span class="k">inline</span><span class="p">;</span>
+    <span class="p">}</span>
+        <span class="nc">.footer-l</span> <span class="nt">li</span> <span class="p">{</span>      <span class="c">/* li { */</span>
+            <span class="k">float</span><span class="o">:</span><span class="k">left</span><span class="p">;</span>
+            <span class="k">display</span><span class="o">:</span><span class="k">block</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="nc">.footer-r</span> <span class="p">{</span>     <span class="c">/* &amp;-r { */</span>
+        <span class="k">float</span><span class="o">:</span><span class="k">right</span><span class="p">;</span>
+    <span class="p">}</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>В названиях классов следует использовать только <strong>строчные буквы</strong>.</p>
+</li>
+<li>
+<p>Рекомендуется использовать классы без наследования и модификаций: лучше больше сущностей, но меньше проблем с поддержкой. Максимальная глубина каскада — 4.</p>
+</li>
+<li>
+<p>Рекомендуется использовать простые односложные имена классов (<code>.last</code>, <code>.first</code>, <code>.top</code>, <code>.title</code>, etc.) для оформления элементов внутри конечных логических блоков.</p>
+</li>
+<li>
+<p>Следует использовать одинаковые единицы измерения шрифтов в пределах проекта (em, px или %).</p>
+</li>
+<li>
+<p>Следует подключать стили, необходимые для <a href="#bookmark7">браузеров Internet Explorer</a> через <strong>отдельные файлы</strong> с помощью <strong>условных комментариев</strong>.</p>
+</li>
+<li>
+<p>Следует описывать <strong>псевдоклассы</strong> для ссылок по правилу LoVeHAte (link, visited, hover, active).</p>
+</li>
+<li>
+<p>Рекомендуется использовать <strong>спрайты</strong> для уменьшения трафика для картинок размером &lt; 2КБ.</p>
+</li>
+<li>
+<p>Для изображений менее 200 байт использовать <strong><a href="http://habrahabr.ru/blogs/client_side_optimization/116538/">data:image</a></strong> <em>(работает в IE ≥ 8 и современных браузерах))</em>.</p>
+</li>
+<li>
+<p>В проектах следует использовать общие <a href="#bookmark5">правила создания, структуры, размещения CSS-файлов</a>.</p>
+</li>
+</ol>
+<p><a name="bookmark7"></a></p>
+<p><a name="поддержка-старых-версий-internet-explorer"></a></p>
+<h3 id="internet-explorer"><a name="user-content-internet-explorer" href="#internet-explorer" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Поддержка старых версий Internet Explorer</h3>
+<p>Поддержка старых версий Internet Explorer осуществляется добавлением правил в отдельные CSS-файлы, подключаемые через условные комментарии. Их следует оформлять подобным образом:</p>
+<p><code>&lt;!--[if lte IE 8]&gt;&lt;link type="text/css" rel="stylesheet" href="static/skin/ie.css"/ &gt;&lt;![endif]--&gt;</code></p>
+<p><strong>ie.css:</strong><br />
+<div class="codehilite"><pre><span class="c">/* IE8 */</span>
+<span class="nt">tag</span> <span class="p">{</span>
+    <span class="n">attribute</span><span class="o">:</span> <span class="n">value</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* IE6,7 */</span>
+<span class="nt">tag</span> <span class="p">{</span>
+    <span class="o">*</span><span class="n">attribute</span><span class="o">:</span><span class="n">value</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* IE6 */</span>
+<span class="nt">html</span> <span class="nt">tag</span> <span class="p">{</span>
+    <span class="n">attribute</span><span class="o">:</span> <span class="n">value</span><span class="p">;</span>
+<span class="p">}</span> 
+
+<span class="nt">tag</span> <span class="p">{</span>
+    <span class="n">_attribute</span><span class="o">:</span> <span class="n">value</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</p>
+<p>Следует добавить <code>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;</code> в <code>&lt;head&gt;</code> документа для предотвращения перехода в режим совместимости в браузерах Internet Explorer 7, 8.</p>
+<p><a name="использование-z-index"></a></p>
+<h3 id="z-index"><a name="user-content-z-index" href="#z-index" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование z-index</h3>
+<p><a name="использование-css3"></a></p>
+<h3 id="css3"><a name="user-content-css3" href="#css3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование CSS3</h3>
+<ol>
+<li><strong>Рекомендуется</strong> использовать методики, <strong>новые свойства</strong> и селекторы CSS3, если это возможно (при поддержке проще будет отказываться от старых версий Internet Explorer).</li>
+<li>Если необходима полноценная поддержка старых версий Internet Explorer — использовать старые техники в соответствующих местах, используя оформление в CSS, подключенных через <a href="#bookmark7">условные комментарии</a>.</li>
+<li>На больших проектах <strong>использовать</strong> <a href="http://css3pie.com/">PIE.htc</a>.</li>
+</ol>
+<p><a name="bookmark5"></a></p>
+<p><a name="css-фрэймворк"></a></p>
+<h2 id="css-"><a name="user-content-css-" href="#css-" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CSS-фрэймворк</h2>
+<p><a name="использование-lesscss-в-проектах"></a></p>
+<h3 id="lesscss"><a name="user-content-lesscss" href="#lesscss" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование<a href="http://lesscss.org/"> lessCSS</a> в проектах</h3>
+<p>В проектах, имеющих (или могущих иметь) более одной страницы обязательно использовать lessCSS. </p>
+<p>Желательно использовать функционал <strong>переменных</strong> (например, для цвета сылок), <strong>микшинов</strong> (например, для кроссбраузерных transition или linear-gradient) и вложенности.</p>
+<h4 id="less"><a name="user-content-less" href="#less" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование вложенности в less.</h4>
+<p>Отдельные блоки, имеющие независимый функционал или используемые в разных окружениях необходимо обзывать уникальными, легкозапоминаемыми и красивыми классами. Если необходимо как-то переопределить блок в неком окружении, то стоит описывать его там же следующим образом:</p>
+<div class="codehilite"><pre><span class="nc">.enviromentselector</span> <span class="p">{</span>
+    <span class="o">.</span><span class="n">ourblock</span> <span class="err">{</span>
+        <span class="n">some</span><span class="o">:</span> <span class="m">1px</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<p>Для структуры внутренних элементов отдельных блоком возможно использовать <strong>«БЭМ»</strong>: </p>
+<ul>
+<li><a href="http://ru.bem.info/method/">Методология БЭМ</a></li>
+<li><a href="http://habrahabr.ru/company/yandex/blog/234905/">Масштабирование наоборот: БЭМ-методология Яндекса на небольших проектах</a></li>
+</ul>
+<p>В less используется следующая структура:</p>
+<div class="codehilite"><pre><span class="nc">.block</span> <span class="p">{</span>
+    <span class="o">&amp;-</span><span class="n">title</span> <span class="err">{</span>
+    <span class="p">}</span>
+    <span class="o">&amp;</span><span class="nt">-content</span> <span class="p">{</span>
+        <span class="n">a</span> <span class="err">{</span>
+        <span class="p">}</span>
+        <span class="o">&amp;</span><span class="nt">-img</span> <span class="p">{</span>
+        <span class="p">}</span>
+    <span class="err">}</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<p>Если есть блоки, использующиеся в измененном виде, то необходимо использовать дополнительно класс модификатор: <code>&lt;div class="ourblock ourblock_red"&gt;&lt;/div&gt;</code></p>
+<p>Соответсвенно в less-файле:</p>
+<div class="codehilite"><pre><span class="o">&amp;</span><span class="nc">.ourblock</span> <span class="p">{</span>
+    <span class="k">background</span><span class="o">:</span> <span class="m">#eee</span><span class="p">;</span>
+    <span class="o">&amp;</span><span class="n">_red</span> <span class="err">{</span>
+        <span class="k">background</span><span class="o">:</span> <span class="m">#f00</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<p><a name="структура-файлов"></a></p>
+<h3 id="_8"><a name="user-content-_8" href="#_8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Структура файлов</h3>
+<ol>
+<li>Настройка mixins, переменных для использования в основном коде.</li>
+<li><a href="http://meyerweb.com/eric/tools/css/reset/">Сброс настроек CSS</a>.</li>
+<li>Настройка глобальных стилей: <code>body</code>, <code>p</code>, <code>a</code>, etc. и основные логические блоки.</li>
+<li>Настройка вида <strong>сетки</strong> (колонок, контентной части, шапки, подвала).</li>
+<li>Настройка вида основных блоков (в отдельных CSS-файлах).</li>
+<li>Файлы объединяются в <strong>style.css</strong> с помощью <code>@import</code>.</li>
+</ol>
+<h4 id="_9"><a name="user-content-_9" href="#_9" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Пример использования</h4>
+<div class="codehilite"><pre><span class="k">@import</span> <span class="s2">&quot;variables&quot;</span><span class="p">;</span>
+
+<span class="k">@import</span> <span class="s2">&quot;reset&quot;</span><span class="p">;</span>
+
+<span class="k">@import</span> <span class="s2">&quot;main&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;layout&quot;</span><span class="p">;</span>
+
+<span class="k">@import</span> <span class="s2">&quot;header&quot;</span><span class="p">;</span>
+
+<span class="k">@import</span> <span class="s2">&quot;footer&quot;</span><span class="p">;</span>
+
+<span class="k">@import</span> <span class="s2">&quot;content&quot;</span><span class="p">;</span>
+
+<span class="k">@import</span> <span class="s2">&quot;side&quot;</span><span class="p">;</span>
+
+<span class="c">/* В lessCSS не обязательно использование расширения при подключении файла через @import */</span>
+</pre></div>
+
+
+<p>Фрэймворк представляет описание общих правил для упрощения, ускорения и  стандартизации разработки и поддержки. Методика позволяет использовать одни и те же файлы стилей в нескольких проектах. Стили состоят из множества LESS-файлов (название файла должно отражать его назначение), которые объединяются в один и сжимаются при публикации проекта.</p>
+<p><a name="названия-классов-для-структурных-блоков-верстки"></a></p>
+<h3 id="_10"><a name="user-content-_10" href="#_10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Названия классов для структурных блоков верстки</h3>
+<div class="codehilite"><pre>&lt;.wrap&gt;
+    &lt;.header&gt;
+        &lt;.menu&gt;
+        &lt;.logo&gt;
+    &lt;.content&gt;
+        &lt;.content-header&gt;
+        &lt;.main&gt;
+        &lt;.side .side_r&gt;
+        &lt;.side .side_l&gt;
+        &lt;.clear&gt;
+        &lt;.content-footer&gt;
+    &lt;.footer&gt;
+{fade, popups, lightboxes, ...}
+</pre></div>
+
+
+<p>Следует использовать названия классов, приведенные выше для стандартизации кода и упрощения понимания чужого кода при поддержке. Загрузка дополнительных колонок осуществляется после контента, затем — дополнительной информации.</p>
+<p>Блоки имеющие определенное местоположение, то есть которые можно использовать только в колонке <code>.side</code> или только в <code>.main</code> рекомендуется называть, используя класс родительского элемента: <code>.side-menu</code>.</p>
+<p><a name="bookmark3"></a></p>
+<p><a name="требования-к-оформлению-javascript"></a></p>
+<h2 id="javascript"><a name="user-content-javascript" href="#javascript" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Требования к оформлению JavaScript</h2>
+<p>Все JavaScript-файлы должны быть в несжатом виде (в т.ч. jQuery) — при публикации проекта файлы объединяются и сжимаются при помощи сценария сборки <a href="http://gruntjs.com">Grunt</a>.</p>
+<p><a name="оформление-кода-1"></a></p>
+<h3 id="_11"><a name="user-content-_11" href="#_11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Оформление кода</h3>
+<ol>
+<li>
+<p>Допускается использование <strong>сamelCase</strong> (camelBack) оформления названия переменных и функций.</p>
+</li>
+<li>
+<p>Следует <strong>комментировать</strong> назначение функций в формате <a href="http://usejsdoc.org">JSDoc</a>.</p>
+</li>
+<li>
+<p>Следует <strong>разбивать на файлы</strong> по функциональному или логическому признаку.</p>
+</li>
+<li>
+<p>Следует <strong>ставить</strong> <code>;</code> в конце блока кода.</p>
+</li>
+<li>
+<p>Рекомендуется использовать <strong>объекты и/или замыкания для группировки</strong> функционала и использования индивидуальной области видимости переменных:</p>
+<div class="codehilite"><pre><span class="kd">var</span> <span class="nx">alpha</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">bar</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">bee</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">foo</span><span class="o">+</span><span class="nx">bee</span><span class="p">;</span>
+    <span class="p">};</span>
+<span class="p">};</span>
+<span class="kd">var</span> <span class="nx">gamma</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">alpha</span><span class="p">();</span>
+<span class="nx">gamma</span><span class="p">.</span><span class="nx">bar</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</pre></div>
+
+
+<p><strong>либо:</strong></p>
+<div class="codehilite"><pre><span class="kd">var</span> <span class="nx">alpha</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;foo&quot;</span> <span class="o">:</span> <span class="mi">0</span>
+<span class="p">};</span>
+<span class="nx">alpha</span><span class="p">.</span><span class="nx">bar</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">bee</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">alpha</span><span class="p">.</span><span class="nx">foo</span><span class="o">+</span><span class="nx">bee</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="nx">alpha</span><span class="p">.</span><span class="nx">bar</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</pre></div>
+
+
+<p><strong>либо:</strong></p>
+<div class="codehilite"><pre><span class="kd">var</span> <span class="nx">alpha</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){};</span>
+<span class="nx">alpha</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">foo</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nx">bar</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">bee</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">foo</span><span class="o">+</span><span class="nx">bee</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+<span class="kd">var</span> <span class="nx">gamma</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">alpha</span><span class="p">();</span>
+<span class="nx">gamma</span><span class="p">.</span><span class="nx">bar</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</pre></div>
+
+
+</li>
+</ol>
+<p><a name="использование-jquery"></a></p>
+<h3 id="jquery"><a name="user-content-jquery" href="#jquery" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование jQuery</h3>
+<ol>
+<li>
+<p>Следует оформлять экземпляр объекта jQuery c <code>$</code>.<br />
+    Пример: <code>var $bar = $("#foo");</code></p>
+</li>
+<li>
+<p>Следует <strong>кэшировать</strong> результат выполнения запроса jQuery для дальнейшего использования. Пример:<br />
+    <div class="codehilite"><pre><span class="kd">var</span> <span class="nx">$self</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="nx">$self</span><span class="p">.</span><span class="nx">hover</span><span class="p">(...);</span>
+<span class="nx">$self</span><span class="p">.</span><span class="nx">click</span><span class="p">(...);</span>
+</pre></div>
+</p>
+</li>
+<li>
+<p>К элементам следует обращаться по <code>id</code>, по <code>id</code> родительского элемента или по объекту родительского элемента:<br />
+    <div class="codehilite"><pre><span class="kd">var</span> <span class="nx">$foo</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#foo&quot;</span><span class="p">);</span> <span class="c1">// id элемента</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#foo input.bar&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(...);</span>  <span class="c1">// родительский id</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;input.bar&quot;</span><span class="p">,</span> <span class="nx">$foo</span><span class="p">).</span><span class="nx">click</span><span class="p">(...);</span> <span class="c1">// объект $foo</span>
+</pre></div>
+</p>
+</li>
+<li>
+<p>Рекомендуется объединять события и правила для элементов одного типа (или селектора) в функцию <code>.each()</code>.</p>
+</li>
+<li>
+<p>Рекомендуется оформлять логически завершенный функционал как <strong><a href="http://docs.jquery.com/Plugins/Authoring#The_Basics">плагины</a></strong>, используя <a href="#bookmark=id.ojnbsol7fjin">фабрику</a>.</p>
+</li>
+<li>
+<p>При написании плагина или добавлении элементов на страницу, следует помещать оформление в отдельный CSS/LESS-файл.</p>
+</li>
+<li>
+<p>Следует использовать замыкание, если jQuery находится в режиме совместимости и/или <code>$</code> занят другой библиотекой; использовать <code>$</code>, как обычно, но внутри замыкания:<br />
+    <div class="codehilite"><pre><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;selector&quot;</span><span class="p">).</span><span class="nx">code</span><span class="p">...</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;other selector&quot;</span><span class="p">).</span><span class="nx">otherCode</span><span class="p">...</span>
+<span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span>
+</pre></div>
+</p>
+</li>
+</ol>
+<h4 id="jquery_1"><a name="user-content-jquery_1" href="#jquery_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Фабрика плагинов jQuery</h4>
+<p>Для создания плагинов, следует исрользовать <a href="https://gist.github.com/peremenov/8e27ec14c87da7112a88">фабрику плагинов</a>. Она позволяет избежать дублирования кода и стандартизирует стиль.</p>
+<h4 id="javascript-jquery"><a name="user-content-javascript-jquery" href="#javascript-jquery" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Список рекомендуемых JavaScript библиотек, плагинов jQuery</h4>
+<p>Рекомендуемые JavaScript библиотеки:</p>
+<ul>
+<li>jQuery</li>
+<li>underscore (lodash)</li>
+<li>Modernizr</li>
+</ul>
+<p><a name="тестирование-javascript-кода"></a></p>
+<h2 id="javascript_1"><a name="user-content-javascript_1" href="#javascript_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Тестирование JavaScript кода</h2>
+<p><a name="файловая-структура-проектов"></a></p>
+<h2 id="_12"><a name="user-content-_12" href="#_12" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Файловая структура проектов</h2>
+<ol>
+<li>
+<p>Названия картинок должны соответствовать названиям блоков, в которых они используются.</p>
+</li>
+<li>
+<p>Названия картинок со спрайтами должны оканчиваться на <strong>-sp(rite)</strong>.</p>
+</li>
+<li>
+<p>Названия картинок для фона должны оканчиваться на <strong>-bg</strong>.</p>
+</li>
+<li>
+<p>Картинки, содержащие в себе равномерный полупрозрачный фон (для совместимости со старыми браузерами), должен называться <strong>tr.CCCCCC.AA.png</strong>, где <strong>CCCCCC</strong> — номер цвета в RGB, <strong>AA</strong> — прозрачность в процентах.</p>
+</li>
+</ol>
+<p>Названия файлов должны быть на английском языке и содержать название блока (если возможно), к которому они принадлежат.</p>
+<p><strong>Необходимо, использовать следующую структуру на сервере разработки:</strong><br />
+<div class="codehilite"><pre>[root]/
+    static/ (Директория со статичными файлами, которые будут использованы непосредственно на сайте)
+        js/
+            script.js (Сжатый и собранный файл из скриптов директории /source/js)
+        css/
+            main.css (Сжатый и собранный файл из стилей директории /source/less)
+            ie.css
+        img/
+            body-bg.gif
+            sprite1.jpg (Сжатый и собранный спрайт из картинок директории /source/sprites/sprite1(.psd))
+            sprite2.gif (Сжатый и собранный спрайт из картинок директории /source/sprites/sprite2(.psd))
+            header-logo.png
+            ...
+    source/
+        js/
+            script/
+                lib.js
+                plugins.js
+                jquery-and-other.js
+        less/
+            main/
+                reset.less
+                header.less
+                ...
+            ie.less
+            main.less
+        sprites/
+            sprite1/
+                ....jpg
+                ...
+            sprite2/
+                ....gif
+                ...
+            sprite3.psd
+        tmp/
+            ...jpg
+    html/
+        _includes
+            _common
+                header.html
+                footer.html
+                …
+            _pages
+            _blocks
+            article
+            index
+        article/
+            article1.html
+            article2.html
+        index.html
+        news/
+            news1.html
+            news2.html
+        top.html
+        ...
+</pre></div>
+</p>
+<p>Директория <code>static/</code> каждого из проектов используется при размешении сайта на &ldquo;боевой&rdquo; сервер.</p>
+<p><a name="полезное"></a></p>
+<h2 id="_13"><a name="user-content-_13" href="#_13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Полезное</h2>
+<ul>
+<li><a href="http://lesscss.org/">lessCSS</a> — улучшенный CSS с переменными, &ldquo;функциями&rdquo;, наследованием и вложенностью</li>
+<li><a href="http://emmet.io">emmet</a> — быстрое написание структуры HTML/CSS в редакторе</li>
+<li><a href="http://tools.arantius.com/tabifier">Tabifier</a> — автоматическая расстановка отступов и переносов в HTML, CSS и JS</li>
+<li><a href="http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page">Рецепт</a> создания футера, «прижатого» к низу страницы</li>
+<li><a href="http://developer.android.com/design/index.html">Style Guides</a> для приложений/сайтов под Андроид</li>
+<li><a href="http://jsfiddle.net/">jsfiddle</a> — хостинг-песочница для JS, CSS, HTML </li>
+<li><a href="http://tinypng.org">TinyPNG</a> — сжималка PNG изображений без потерь</li>
+<li><a href="http://cufon.shoqolate.com/generate/">Cufon</a> — генерация кастомных шрифтов для веб</li>
+</ul>
+<p><a name="bookmark6"></a></p>
+<p><a name="вычисление-переменных-ssi"></a></p>
+<h3 id="ssi_1"><a name="user-content-ssi_1" href="#ssi_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Вычисление переменных SSI</h3>
+<p>См. <a href="http://pastebin.com/t0rVcbVT">http://pastebin.com/t0rVcbVT</a></p>
+<div class="codehilite"><pre><span class="c">&lt;!--#if expr=&quot;$DOCUMENT_URI = /(.*)\/.*\.html/&quot; --&gt;</span>
+    <span class="c">&lt;!--#set var=&quot;DOCUMENT_PATH&quot; value=&quot;$1&quot; --&gt;</span>
+<span class="c">&lt;!--#endif --&gt;</span>
+
+<span class="c">&lt;!--#if expr=&quot;$DOCUMENT_PATH = /(.*)\/html/&quot; --&gt;</span>
+    <span class="c">&lt;!--#set var=&quot;_PATH&quot; value=&quot;$1&quot; --&gt;</span>
+    <span class="c">&lt;!--#set var=&quot;DOCUMENT_PATH&quot; value=&quot;$_PATH/html&quot; --&gt;</span>
+<span class="c">&lt;!--#endif --&gt;</span>
+
+<span class="c">&lt;!--#set var=&quot;includespath&quot; value=&quot;$DOCUMENT_PATH/_includes&quot; --&gt;</span>
+<span class="c">&lt;!--#set var=&quot;assets-path&quot; value=&quot;$_PATH/source/tmp&quot; --&gt;</span>
+<span class="c">&lt;!--#set var=&quot;img-path&quot; value=&quot;$_PATH/static/img&quot; --&gt;</span>
+<span class="c">&lt;!--#set var=&quot;js-path&quot; value=&quot;$_PATH/static/js&quot; --&gt;</span>
+<span class="c">&lt;!--#set var=&quot;css-path&quot; value=&quot;$_PATH/static/css&quot; --&gt;</span>
+<span class="c">&lt;!--#set var=&quot;transparent&quot; value=&quot;$_PATH/static/img/null.gif&quot; --&gt;</span>
+</pre></div></article></body></html>
