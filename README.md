@@ -6,3 +6,5 @@
 - Конвертирование в Markdown, дополнение, размещение и поддержка на GitHub - [asg-3d](https://github.com/asg-3d)
 
 ## Открыть регламент: [rules_of_development.html](./rules_of_development.html)
+
+*Последнее обновление: 17 июня 2015г.*
