@@ -1091,7 +1091,7 @@ body .markdown-body
 <li><a href="#юзабилити">Юзабилити</a></li>
 <li><a href="#стандарты-w3c">Стандарты W3C</a></li>
 <li><a href="#требования-seo">Требования SEO</a></li>
-<li><a href="#использование-ssi">Использование SSI)</a></li>
+<li><a href="#использование-ssi">Использование SSI</a></li>
 </ul>
 </li>
 <li><a href="#требования-к-оформлению-css">Требования к оформлению CSS</a><ul>
@@ -1102,7 +1102,7 @@ body .markdown-body
 </ul>
 </li>
 <li><a href="#css-фрэймворк">CSS-фрэймворк</a><ul>
-<li><a href="#использование-lesscss-в-проектах">Использование lessCSS в проектах</a></li>
+<li><a href="#использование-less-в-проектах">Использование Less в проектах</a></li>
 <li><a href="#структура-файлов">Структура файлов</a></li>
 <li><a href="#названия-классов-для-структурных-блоков-верстки">Названия классов для структурных блоков верстки</a></li>
 </ul>
@@ -1382,10 +1382,10 @@ body .markdown-body
 </li>
 </ol>
 <p><a name="использование-ssi"></a></p>
-<h3 id="ssi"><a name="user-content-ssi" href="#ssi" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование <a href="http://ru.wikipedia.org/wiki/SSI_(программирование)">SSI</a></h3>
+<h3 id="ssi"><a name="user-content-ssi" href="#ssi" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование SSI</h3>
 <ol>
 <li>
-<p>Для упрощения разработки следует <strong>использовать SSI</strong>. SSI помогает избежать повторения кода и разбить страницу на логические блоки. Также возможно использование переменных для отображения разного содержимого страниц в зависимости от необходимых условий.</p>
+<p>Для упрощения разработки следует <strong>использовать SSI</strong>. <a href="http://ru.wikipedia.org/wiki/SSI_(программирование)">SSI</a> помогает избежать повторения кода и разбить страницу на логические блоки. Также возможно использование переменных для отображения разного содержимого страниц в зависимости от необходимых условий.</p>
 </li>
 <li>
 <p>Файлы следует подключать через <strong>относительные пути</strong>.</p>
@@ -1418,7 +1418,7 @@ body .markdown-body
     <span class="k">width</span><span class="o">:</span><span class="m">980px</span><span class="p">;</span>
     <span class="k">margin</span><span class="o">:</span><span class="m">0</span> <span class="k">auto</span><span class="p">;</span>
 <span class="p">}</span>
-    <span class="nc">.footer-l</span> <span class="p">{</span>     <span class="c">/* &amp;-l {  *//* Если в формате less */</span>
+    <span class="nc">.footer-l</span> <span class="p">{</span>     <span class="c">/* &amp;-l {  *//* Если в формате Less */</span>
         <span class="k">float</span><span class="o">:</span><span class="k">left</span><span class="p">;</span>
         <span class="k">display</span><span class="o">:</span><span class="k">inline</span><span class="p">;</span>
     <span class="p">}</span>
@@ -1500,11 +1500,11 @@ body .markdown-body
 <p><a name="bookmark5"></a></p>
 <p><a name="css-фрэймворк"></a></p>
 <h2 id="css-"><a name="user-content-css-" href="#css-" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CSS-фрэймворк</h2>
-<p><a name="использование-lesscss-в-проектах"></a></p>
-<h3 id="lesscss"><a name="user-content-lesscss" href="#lesscss" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование <a href="http://lesscss.org/">lessCSS</a> в проектах</h3>
-<p>В проектах, имеющих (или могущих иметь) более одной страницы обязательно использовать lessCSS. </p>
+<p><a name="использование-less-в-проектах"></a></p>
+<h3 id="less"><a name="user-content-less" href="#less" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование <a href="http://lesscss.org/">Less</a> в проектах</h3>
+<p>В проектах, имеющих (или могущих иметь) более одной страницы обязательно использовать Less. </p>
 <p>Желательно использовать функционал <strong>переменных</strong> (например, для цвета сылок), <strong>микшинов</strong> (например, для кроссбраузерных transition или linear-gradient) и вложенности.</p>
-<h4 id="less"><a name="user-content-less" href="#less" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование вложенности в less.</h4>
+<h4 id="less_1"><a name="user-content-less_1" href="#less_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование вложенности в Less.</h4>
 <p>Отдельные блоки, имеющие независимый функционал или используемые в разных окружениях необходимо обзывать уникальными, легкозапоминаемыми и красивыми классами. Если необходимо как-то переопределить блок в неком окружении, то стоит описывать его там же следующим образом:</p>
 <div class="codehilite"><pre><span class="nc">.enviromentselector</span> <span class="p">{</span>
     <span class="o">.</span><span class="n">ourblock</span> <span class="err">{</span>
@@ -1514,12 +1514,7 @@ body .markdown-body
 </pre></div>
 
 
-<p>Для структуры внутренних элементов отдельных блоком возможно использовать <strong>«БЭМ»</strong>: </p>
-<ul>
-<li><a href="http://ru.bem.info/method/">Методология БЭМ</a></li>
-<li><a href="http://habrahabr.ru/company/yandex/blog/234905/">Масштабирование наоборот: БЭМ-методология Яндекса на небольших проектах</a></li>
-</ul>
-<p>В less используется следующая структура:</p>
+<p>В Less используется следующая структура:</p>
 <div class="codehilite"><pre><span class="nc">.block</span> <span class="p">{</span>
     <span class="o">&amp;-</span><span class="n">title</span> <span class="err">{</span>
     <span class="p">}</span>
@@ -1534,7 +1529,7 @@ body .markdown-body
 
 
 <p>Если есть блоки, использующиеся в измененном виде, то необходимо использовать дополнительно класс модификатор: <code>&lt;div class="ourblock ourblock_red"&gt;&lt;/div&gt;</code></p>
-<p>Соответсвенно в less-файле:</p>
+<p>Соответсвенно в Less-файле:</p>
 <div class="codehilite"><pre><span class="o">&amp;</span><span class="nc">.ourblock</span> <span class="p">{</span>
     <span class="k">background</span><span class="o">:</span> <span class="m">#eee</span><span class="p">;</span>
     <span class="o">&amp;</span><span class="n">_red</span> <span class="err">{</span>
@@ -1570,11 +1565,11 @@ body .markdown-body
 
 <span class="k">@import</span> <span class="s2">&quot;side&quot;</span><span class="p">;</span>
 
-<span class="c">/* В lessCSS не обязательно использование расширения при подключении файла через @import */</span>
+<span class="c">/* В Less не обязательно использование расширения при подключении файла через @import */</span>
 </pre></div>
 
 
-<p>Фрэймворк представляет описание общих правил для упрощения, ускорения и  стандартизации разработки и поддержки. Методика позволяет использовать одни и те же файлы стилей в нескольких проектах. Стили состоят из множества LESS-файлов (название файла должно отражать его назначение), которые объединяются в один и сжимаются при публикации проекта.</p>
+<p>Фрэймворк представляет описание общих правил для упрощения, ускорения и  стандартизации разработки и поддержки. Методика позволяет использовать одни и те же файлы стилей в нескольких проектах. Стили состоят из множества Less-файлов (название файла должно отражать его назначение), которые объединяются в один и сжимаются при публикации проекта.</p>
 <p><a name="названия-классов-для-структурных-блоков-верстки"></a></p>
 <h3 id="_10"><a name="user-content-_10" href="#_10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Названия классов для структурных блоков верстки</h3>
 <div class="codehilite"><pre>&lt;.wrap&gt;
@@ -1684,7 +1679,7 @@ body .markdown-body
 <p>Рекомендуется оформлять логически завершенный функционал, используя <a href="#фабрика-плагинов-jquery">фабрику плагинов</a>.</p>
 </li>
 <li>
-<p>При написании плагина или добавлении элементов на страницу, следует помещать оформление в отдельный CSS/LESS-файл.</p>
+<p>При написании плагина или добавлении элементов на страницу, следует помещать оформление в отдельный CSS/Less-файл.</p>
 </li>
 <li>
 <p>Следует использовать замыкание для избежания конфликтов, когда jQuery находится в режиме совместимости и/или <code>$</code> занят другой библиотекой; использовать <code>$</code>, как обычно внутри замыкания:<br />
@@ -1786,10 +1781,101 @@ body .markdown-body
 <p>Директория <code>static/</code> каждого из проектов используется при размешении сайта на &ldquo;боевой&rdquo; сервер.</p>
 <p><a name="использование-бэм"></a></p>
 <h2 id="_13"><a name="user-content-_13" href="#_13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Использование БЭМ</h2>
+<p>Для структуры внутренних элементов отдельных блоком возможно использовать <strong>«БЭМ»</strong>: </p>
+<ul>
+<li><a href="http://ru.bem.info/method/">Методология БЭМ</a>.</li>
+<li><a href="http://habrahabr.ru/company/yandex/blog/234905/">Масштабирование наоборот: БЭМ-методология Яндекса на небольших проектах</a>.</li>
+</ul>
+<p><em>Пример HTML-файла для блоков &lsquo;hitList&rsquo;, &lsquo;hitListItem&rsquo; и &lsquo;socialBlock&rsquo;:</em><br />
+<div class="codehilite"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;hitList&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;hitListItem&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#1&quot;</span> <span class="na">class=</span><span class="s">&quot;hitListItem__imgBlock&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;hitListItem__img&quot;</span> <span class="na">src=</span><span class="s">&quot;img1.jpg&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;hitListItem__brief&quot;</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;socialBlock&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;socialBlock__likes&quot;</span><span class="nt">&gt;</span>25<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;socialBlock__share&quot;</span><span class="nt">&gt;</span>36<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;hitListItem&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#2&quot;</span> <span class="na">class=</span><span class="s">&quot;hitListItem__imgBlock&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;hitListItem__img&quot;</span> <span class="na">src=</span><span class="s">&quot;img2.jpg&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;hitListItem__brief&quot;</span><span class="nt">&gt;</span>Dolor sit amet<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;socialBlock&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;socialBlock__likes&quot;</span><span class="nt">&gt;</span>4<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;socialBlock__share&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;hitListItem&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#3&quot;</span> <span class="na">class=</span><span class="s">&quot;hitListItem__imgBlock&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;hitListItem__img&quot;</span> <span class="na">src=</span><span class="s">&quot;img3.jpg&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;hitListItem__brief&quot;</span><span class="nt">&gt;</span>Consectetur adipiscing elit<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;socialBlock&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;socialBlock__likes&quot;</span><span class="nt">&gt;</span>345<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;socialBlock__share&quot;</span><span class="nt">&gt;</span>200<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</p>
+<p><em>Пример Less-файла для этих блоков:</em> <br />
+<div class="codehilite"><pre><span class="c">/* hitList -&gt; */</span>
+<span class="nc">.hitList</span> <span class="p">{</span> <span class="c">/* БЛОК именуется в CamelCase */</span>
+    <span class="o">&amp;</span><span class="n">_size</span> <span class="err">{</span> <span class="c">/* МОДИФИКАТОР отделяется ОДНИМ подчёркиванием */</span>
+        <span class="o">&amp;</span><span class="n">_single</span> <span class="err">{</span>
+        <span class="p">}</span>
+        <span class="o">&amp;</span><span class="nt">_double</span> <span class="p">{</span>
+            <span class="o">.</span><span class="n">hitListItem</span> <span class="err">{</span> <span class="c">/* При добавлении модификатора &#39;.hitList_size_double&#39; к блоку &#39;hitList&#39; переопределяются стили (за счёт специфичности) вложенного блока &#39;hitListItem&#39;  */</span>
+            <span class="p">}</span>
+            <span class="nc">.hitListItem__img</span> <span class="p">{</span>
+            <span class="p">}</span>
+        <span class="err">}</span>
+        <span class="o">&amp;</span><span class="nt">_triple</span> <span class="p">{</span>
+        <span class="p">}</span>
+        <span class="o">&amp;</span><span class="nt">_quad</span> <span class="p">{</span>
+        <span class="p">}</span>
+    <span class="err">}</span>
+<span class="err">}</span>
+<span class="c">/* &lt;- hitList */</span>
+
+<span class="c">/* hitListItem -&gt; */</span>
+<span class="nc">.hitListItem</span> <span class="p">{</span>
+    <span class="o">&amp;</span><span class="n">__imgBlock</span> <span class="err">{</span> <span class="c">/* ЭЛЕМЕНТ также именуется в CamelCase и отделяется ДВУМЯ подчёркиваниями */</span>
+    <span class="p">}</span>
+    <span class="o">&amp;</span><span class="nt">__img</span> <span class="p">{</span>
+    <span class="p">}</span>
+    <span class="o">&amp;</span><span class="nt">__brief</span> <span class="p">{</span>
+    <span class="p">}</span>
+    <span class="nc">.socialBlock</span> <span class="p">{</span> <span class="c">/* Добавляем отступы и пр. для блока &#39;socialBlock&#39; вложенного в данный блок (&#39;hitListItem&#39;) */</span>
+    <span class="p">}</span>
+<span class="err">}</span>
+<span class="c">/* &lt;- hitListItem */</span>
+
+<span class="c">/* socialBlock -&gt; */</span>
+<span class="nc">.socialBlock</span> <span class="p">{</span>
+    <span class="o">&amp;</span><span class="n">__likes</span><span class="o">,</span> <span class="o">&amp;</span><span class="n">__share</span> <span class="err">{</span>
+        <span class="o">&amp;:</span><span class="n">before</span> <span class="err">{</span>
+        <span class="p">}</span>
+    <span class="err">}</span>
+    <span class="o">&amp;</span><span class="nt">__likes</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="p">}</span>
+    <span class="o">&amp;</span><span class="nt">__share</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="p">}</span>
+<span class="err">}</span>
+<span class="c">/* &lt;- socialBlock */</span>
+</pre></div>
+</p>
 <p><a name="полезное"></a></p>
 <h2 id="_14"><a name="user-content-_14" href="#_14" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Полезное</h2>
 <ul>
-<li><a href="http://lesscss.org/">lessCSS</a> — улучшенный CSS с переменными, &ldquo;функциями&rdquo;, наследованием и вложенностью</li>
+<li><a href="http://lesscss.org/">Less</a> — улучшенный CSS с переменными, &ldquo;функциями&rdquo;, наследованием и вложенностью</li>
 <li><a href="http://emmet.io">emmet</a> — быстрое написание структуры HTML/CSS в редакторе</li>
 <li><a href="http://tools.arantius.com/tabifier">Tabifier</a> — автоматическая расстановка отступов и переносов в HTML, CSS и JS</li>
 <li><a href="http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page">Рецепт</a> создания футера, «прижатого» к низу страницы</li>
