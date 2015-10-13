@@ -98,7 +98,7 @@
 
 2. Firefox — последняя версия.
 
-3. Opera (Presto, Webkit) — последняя версия (12, 20).
+3. Opera (Presto, Webkit) — последняя версия (12 и последняя версии).
 
 4. Google Chrome — последняя версия.
 
@@ -109,7 +109,6 @@
 	- Opera Mobile, Opera Mini
 	- Safari
 	- Android
-	- Symbian
 	- Windows Phone
 
 <!-- -->
@@ -174,8 +173,8 @@
 		<!-- /[rel="some-link"] -->
 		```
 
-9. При использовании **zenCoding** использовать модификатор `|c`.
-Например: `tag.class|c`.
+    При использовании **zenCoding** или [Emmet](http://emmet.io) можно использовать модификатор `|c`.
+    Например: `tag.class|c`.
 
 <a name="юзабилити"></a>
 ### Юзабилити
@@ -214,11 +213,11 @@
 
 Шаблон страницы должен быть сформирован с учетом требований по оптимизации под поисковые системы:
 
-1. На странице следует использовать не более одного заголовка (`<h1> … <h6>`) или не более трех, но разного уровня.
+1. На странице следует использовать не более одного заголовка (`<h1> … <h6>`) или не более трех, но разного уровня — обсуждается дополнительно с SEO-специалистом.
 
 2. Заголовком следует помечать именно заголовок (статьи например). Название раздела или блока заголовком не является.
 
-3. Приветствуется использование [микроформатов](http://microformats.org) для [карточек пользователей и организаций](http://help.yandex.ru/webmaster/?id=1111573), [товаров](http://help.yandex.ru/webmaster/?id=1113264), [кулинарных рецептов](http://help.yandex.ru/webmaster/?id=1111981), [событий](http://ru.wikipedia.org/wiki/HCalendar), [отзывов пользователей](http://help.yandex.ru/webmaster/?id=1113262), [географических координат](http://ru.wikipedia.org/wiki/Geo_(микроформат)).
+3. Приветствуется использование [микроформатов](http://microformats.org) для [карточек пользователей и организаций](http://help.yandex.ru/webmaster/?id=1111573), [товаров](http://help.yandex.ru/webmaster/?id=1113264), [кулинарных рецептов](http://help.yandex.ru/webmaster/?id=1111981), [событий](http://ru.wikipedia.org/wiki/HCalendar), [отзывов пользователей](http://help.yandex.ru/webmaster/?id=1113262), [географических координат](http://ru.wikipedia.org/wiki/Geo_(микроформат)) — обсуждается дополнительно с SEO-специалистом.
 
 4. Приветствуется использование стандартов семантической разметки ([schema.org](http://schema.org/), перевод - [ruschema.org](http://ruschema.org/)) для поисковых систем.
 
@@ -247,21 +246,24 @@
 
 3. Следует использовать `class` для оформление стилей. `id` используется только для  одиночных (уникальных) элементов, с которыми будет взаимодействовать JavaScript или для элементов форм, которым нужен `label`.
 
-4. Следует соблюдать иерархию селекторов при помощи отступов:
+4. При верстке CSS, следует соблюдать иерархию селекторов при помощи отступов:
 
 	```css
 	.footer {
 		width:980px;
 		margin:0 auto;
 	}
-		.footer-l {		/* &-l {  *//* Если в формате Less */
+	
+		.footer-l {		/* &-l {  *//* Если в формате less */
 			float:left;
 			display:inline;
 		}
+			
 			.footer-l li {		/* li { */
 				float:left;
 				display:block;
 			}
+			
 		.footer-r {		/* &-r { */
 			float:right;
 		}
@@ -281,7 +283,7 @@
 
 11. Рекомендуется использовать **спрайты** для уменьшения трафика для картинок размером < 2КБ.
 
-12. Для изображений менее 200 байт использовать **[data:image](http://habrahabr.ru/blogs/client_side_optimization/116538/)** *(работает в IE ≥ 8 и современных браузерах))*.
+12. Для изображений менее 200 байт использовать **[data:image](http://habrahabr.ru/blogs/client_side_optimization/116538/)** *(работает в IE ≥ 8 и современных браузерах)*.
 
 13. В проектах следует использовать общие [правила создания, структуры, размещения CSS-файлов](#bookmark5).
 
@@ -295,6 +297,7 @@
 `<!--[if lte IE 8]><link type="text/css" rel="stylesheet" href="static/skin/ie.css"/ ><![endif]-->`
 
 **ie.css:**
+
 ```css
 /* IE8 */
 tag {
@@ -338,11 +341,11 @@ tag {
 
 В проектах, имеющих (или могущих иметь) более одной страницы обязательно использовать Less. 
 
-Желательно использовать функционал **переменных** (например, для цвета сылок), **микшинов** (например, для кроссбраузерных transition или linear-gradient) и вложенности.
+Желательно использовать функционал **переменных** (например, для цвета сылок), **микшинов** (например, для кроссбраузерных transition или `linear-gradient`) и вложенности.
 
 #### Использование вложенности в Less.
 
-Отдельные блоки, имеющие независимый функционал или используемые в разных окружениях необходимо обзывать уникальными, легкозапоминаемыми и красивыми классами. Если необходимо как-то переопределить блок в неком окружении, то стоит описывать его там же следующим образом:
+Отдельные блоки, имеющие независимый функционал или используемые в разных окружениях необходимо описывать уникальными, легкозапоминаемыми названиями. Если необходимо как-то переопределить блок в неком окружении, то стоит описывать его там же следующим образом:
 
 ```css
 .enviromentselector {
@@ -530,7 +533,7 @@ tag {
 <a name="фабрика-плагинов-jquery"></a>
 #### Фабрика плагинов jQuery
 
-Для создания плагинов, следует исрользовать [фабрику плагинов](https://github.com/peremenov/jquery-factory). Она позволяет избежать дублирования кода и стандартизирует стиль.
+Для создания плагинов, следует исрользовать [фабрику плагинов](https://github.com/peremenov/jquery-factory) ([русская документация](https://github.com/peremenov/jquery-factory/blob/master/README.ru.md)). Она позволяет избежать дублирования и помогает структурировать код.
 
 #### Список рекомендуемых JavaScript библиотек, плагинов jQuery
 
@@ -625,40 +628,41 @@ tag {
 - [Методология БЭМ](http://ru.bem.info/method/).
 - [Масштабирование наоборот: БЭМ-методология Яндекса на небольших проектах](http://habrahabr.ru/company/yandex/blog/234905/).
 
-*Пример HTML-файла для блоков 'hitList', 'hitListItem' и 'socialBlock':*
+Пример HTML-разметки для блоков `hit-list`, `hit-list-item` и `social-block`:
+
 ```html
-<div class="hitList">
+<div class="hit-list-item">
 
-	<div class="hitListItem">
-		<a href="#1" class="hitListItem__imgBlock">
-			<img class="hitListItem__img" src="img1.jpg" />
-			<p class="hitListItem__brief">Lorem ipsum</p>
+	<div class="hit-list-item">
+		<a href="#1" class="hit-list-item__imgBlock">
+			<img class="hit-list-item__img" src="img1.jpg" />
+			<p class="hit-list-item__brief">Lorem ipsum</p>
 		</a>
-		<div class="socialBlock">
-			<span class="socialBlock__likes">25</span>
-			<span class="socialBlock__share">36</span>
+		<div class="social-block">
+			<span class="social-block__likes">25</span>
+			<span class="social-block__share">36</span>
 		</div>
 	</div>
 
-	<div class="hitListItem">
-		<a href="#2" class="hitListItem__imgBlock">
-			<img class="hitListItem__img" src="img2.jpg" />
-			<p class="hitListItem__brief">Dolor sit amet</p>
+	<div class="hit-list-item">
+		<a href="#2" class="hit-list-item__imgBlock">
+			<img class="hit-list-item__img" src="img2.jpg" />
+			<p class="hit-list-item__brief">Dolor sit amet</p>
 		</a>
-		<div class="socialBlock">
-			<span class="socialBlock__likes">4</span>
-			<span class="socialBlock__share">1</span>
+		<div class="social-block">
+			<span class="social-block__likes">4</span>
+			<span class="social-block__share">1</span>
 		</div>
 	</div>
 
-	<div class="hitListItem">
-		<a href="#3" class="hitListItem__imgBlock">
-			<img class="hitListItem__img" src="img3.jpg" />
-			<p class="hitListItem__brief">Consectetur adipiscing elit</p>
+	<div class="hit-list-item">
+		<a href="#3" class="hit-list-item__imgBlock">
+			<img class="hit-list-item__img" src="img3.jpg" />
+			<p class="hit-list-item__brief">Consectetur adipiscing elit</p>
 		</a>
-		<div class="socialBlock">
-			<span class="socialBlock__likes">345</span>
-			<span class="socialBlock__share">200</span>
+		<div class="social-block">
+			<span class="social-block__likes">345</span>
+			<span class="social-block__share">200</span>
 		</div>
 	</div>
 	
@@ -667,15 +671,15 @@ tag {
 
 *Пример Less-файла для этих блоков:* 
 ```css
-/* hitList -> */
-.hitList { /* БЛОК именуется в CamelCase */
+/* hit-list-item -> */
+.hit-list-item { /* БЛОК именуется в CamelCase */
 	&_size { /* МОДИФИКАТОР отделяется ОДНИМ подчёркиванием */
 		&_single {
 		}
 		&_double {
-			.hitListItem { /* При добавлении модификатора '.hitList_size_double' к блоку 'hitList' переопределяются стили (за счёт специфичности) вложенного блока 'hitListItem'  */
+			.hit-list-item { /* При добавлении модификатора '.hit-list-item_size_double' к блоку 'hit-list-item' переопределяются стили (за счёт специфичности) вложенного блока 'hit-list-item'  */
 			}
-			.hitListItem__img {
+			.hit-list-item__img {
 			}
 		}
 		&_triple {
@@ -684,23 +688,23 @@ tag {
 		}
 	}
 }
-/* <- hitList */
+/* <- hit-list-item */
 
-/* hitListItem -> */
-.hitListItem {
+/* hit-list-item -> */
+.hit-list-item {
 	&__imgBlock { /* ЭЛЕМЕНТ также именуется в CamelCase и отделяется ДВУМЯ подчёркиваниями */
 	}
 	&__img {
 	}
 	&__brief {
 	}
-	.socialBlock { /* Добавляем отступы и пр. для блока 'socialBlock' вложенного в данный блок ('hitListItem') */
+	.social-block { /* Добавляем отступы и пр. для блока 'social-block' вложенного в данный блок ('hit-list-item') */
 	}
 }
-/* <- hitListItem */
+/* <- hit-list-item */
 
-/* socialBlock -> */
-.socialBlock {
+/* social-block -> */
+.social-block {
 	&__likes, &__share {
 		&:before {
 		}
@@ -710,10 +714,8 @@ tag {
 	&__share:before {
 	}
 }
-/* <- socialBlock */
+/* <- social-block */
 ```
-
-
 
 
 <a name="полезное"></a>
@@ -730,7 +732,8 @@ tag {
 
 <a name="вычисление-переменных-ssi"></a>
 ### Вычисление переменных SSI
-См. http://pastebin.com/t0rVcbVT
+
+В Apache 2.4 (в версии 2.2 работает корректно) для корректной работы вычисления переменных необходимо включить директиву `SSILegacyExprParser On`.
 
 ```html
 <!--#if expr="$DOCUMENT_URI = /(.*)\/.*\.html/" -->
