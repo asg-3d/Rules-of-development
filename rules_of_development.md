@@ -628,40 +628,41 @@ tag {
 - [Методология БЭМ](http://ru.bem.info/method/).
 - [Масштабирование наоборот: БЭМ-методология Яндекса на небольших проектах](http://habrahabr.ru/company/yandex/blog/234905/).
 
-*Пример HTML-файла для блоков 'hitList', 'hitListItem' и 'socialBlock':*
+Пример HTML-разметки для блоков `hit-list`, `hit-list-item` и `social-block`:
+
 ```html
-<div class="hitList">
+<div class="hit-list-item">
 
-	<div class="hitListItem">
-		<a href="#1" class="hitListItem__imgBlock">
-			<img class="hitListItem__img" src="img1.jpg" />
-			<p class="hitListItem__brief">Lorem ipsum</p>
+	<div class="hit-list-item">
+		<a href="#1" class="hit-list-item__imgBlock">
+			<img class="hit-list-item__img" src="img1.jpg" />
+			<p class="hit-list-item__brief">Lorem ipsum</p>
 		</a>
-		<div class="socialBlock">
-			<span class="socialBlock__likes">25</span>
-			<span class="socialBlock__share">36</span>
+		<div class="social-block">
+			<span class="social-block__likes">25</span>
+			<span class="social-block__share">36</span>
 		</div>
 	</div>
 
-	<div class="hitListItem">
-		<a href="#2" class="hitListItem__imgBlock">
-			<img class="hitListItem__img" src="img2.jpg" />
-			<p class="hitListItem__brief">Dolor sit amet</p>
+	<div class="hit-list-item">
+		<a href="#2" class="hit-list-item__imgBlock">
+			<img class="hit-list-item__img" src="img2.jpg" />
+			<p class="hit-list-item__brief">Dolor sit amet</p>
 		</a>
-		<div class="socialBlock">
-			<span class="socialBlock__likes">4</span>
-			<span class="socialBlock__share">1</span>
+		<div class="social-block">
+			<span class="social-block__likes">4</span>
+			<span class="social-block__share">1</span>
 		</div>
 	</div>
 
-	<div class="hitListItem">
-		<a href="#3" class="hitListItem__imgBlock">
-			<img class="hitListItem__img" src="img3.jpg" />
-			<p class="hitListItem__brief">Consectetur adipiscing elit</p>
+	<div class="hit-list-item">
+		<a href="#3" class="hit-list-item__imgBlock">
+			<img class="hit-list-item__img" src="img3.jpg" />
+			<p class="hit-list-item__brief">Consectetur adipiscing elit</p>
 		</a>
-		<div class="socialBlock">
-			<span class="socialBlock__likes">345</span>
-			<span class="socialBlock__share">200</span>
+		<div class="social-block">
+			<span class="social-block__likes">345</span>
+			<span class="social-block__share">200</span>
 		</div>
 	</div>
 	
@@ -670,15 +671,15 @@ tag {
 
 *Пример Less-файла для этих блоков:* 
 ```css
-/* hitList -> */
-.hitList { /* БЛОК именуется в CamelCase */
+/* hit-list-item -> */
+.hit-list-item { /* БЛОК именуется в CamelCase */
 	&_size { /* МОДИФИКАТОР отделяется ОДНИМ подчёркиванием */
 		&_single {
 		}
 		&_double {
-			.hitListItem { /* При добавлении модификатора '.hitList_size_double' к блоку 'hitList' переопределяются стили (за счёт специфичности) вложенного блока 'hitListItem'  */
+			.hit-list-item { /* При добавлении модификатора '.hit-list-item_size_double' к блоку 'hit-list-item' переопределяются стили (за счёт специфичности) вложенного блока 'hit-list-item'  */
 			}
-			.hitListItem__img {
+			.hit-list-item__img {
 			}
 		}
 		&_triple {
@@ -687,23 +688,23 @@ tag {
 		}
 	}
 }
-/* <- hitList */
+/* <- hit-list-item */
 
-/* hitListItem -> */
-.hitListItem {
+/* hit-list-item -> */
+.hit-list-item {
 	&__imgBlock { /* ЭЛЕМЕНТ также именуется в CamelCase и отделяется ДВУМЯ подчёркиваниями */
 	}
 	&__img {
 	}
 	&__brief {
 	}
-	.socialBlock { /* Добавляем отступы и пр. для блока 'socialBlock' вложенного в данный блок ('hitListItem') */
+	.social-block { /* Добавляем отступы и пр. для блока 'social-block' вложенного в данный блок ('hit-list-item') */
 	}
 }
-/* <- hitListItem */
+/* <- hit-list-item */
 
-/* socialBlock -> */
-.socialBlock {
+/* social-block -> */
+.social-block {
 	&__likes, &__share {
 		&:before {
 		}
@@ -713,10 +714,8 @@ tag {
 	&__share:before {
 	}
 }
-/* <- socialBlock */
+/* <- social-block */
 ```
-
-
 
 
 <a name="полезное"></a>
@@ -733,6 +732,8 @@ tag {
 
 <a name="вычисление-переменных-ssi"></a>
 ### Вычисление переменных SSI
+
+В Apache 2.4 (в версии 2.2 работает корректно) для корректной работы вычисления переменных необходимо включить директиву `SSILegacyExprParser On`.
 
 ```html
 <!--#if expr="$DOCUMENT_URI = /(.*)\/.*\.html/" -->
